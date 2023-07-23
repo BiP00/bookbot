@@ -15,5 +15,5 @@ with open("books/frankenstein.txt") as f:
         if letter in letters_dictionary:
             letters_dictionary[letter] += 1
         elif letter not in letters_dictionary:
-            letters_dictionary[letter] = 0
+            letters_dictionary[letter] = 1
     print(letters_dictionary)
