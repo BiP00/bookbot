@@ -3,6 +3,17 @@ with open("books/frankenstein.txt") as f:
     lowered_file_content = file_content.lower()
     words = lowered_file_content.split()
     counter = 0
+    blob = ""
+    letters = ""
+    letters_dictionary = {}
     for word in words:
-        counter += 1
-    print(words)
+        blob += word
+    for ch in blob:
+        if ch.isalpha():
+            letters += ch
+    for letter in letters:
+        if letter in letters_dictionary:
+            letters_dictionary[letter] += 1
+        elif letter not in letters_dictionary:
+            letters_dictionary[letter] = 0
+    print(letters_dictionary)
